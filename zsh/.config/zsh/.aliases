@@ -1,0 +1,66 @@
+#!/bin/sh
+
+# shortcuts
+alias _="sudo"
+alias root="sudo -i"
+alias c="clear"
+alias mk="mkdir -pv"
+alias cp="cp -iv"
+alias mv="mv -iv"
+alias t="touch"
+alias x="exit"
+alias c="clear"
+alias o="open ."
+alias vi="nvim"
+alias vim="nvim"
+alias v="nvim"
+alias xp="chmod +x"
+alias quit="exit"
+
+alias ..='cd ..'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+
+# eza aliases
+alias ls="eza -a"
+alias l="ls -F --icons --group-directories-first"
+alias lv="ls -1F --icons --group-directories-first"
+alias ll='ls -l'
+alias la='ls -lbhHigUmuS'
+alias lx='ls -lbhHigUmuS@'
+
+# commonly used directories
+alias home="cd $HOME"
+alias dots="cd $DOTFILES"
+alias docs="cd $HOME/Documents"
+alias dl="cd $HOME/Downloads"
+alias nvconf="cd ${XDG_CONFIG_HOME:-$HOME/.config}/nvim"
+
+# zsh
+alias zshrc="${EDITOR:-vim} "${ZDOTDIR:-$HOME}"/.zshrc"
+alias zdot="cd ${ZDOTDIR:-~}"
+alias reload="source ${ZDOTDIR:-~}/.zshrc"
+
+# power
+alias reboot="sudo reboot"
+alias off="sudo shutdown -r now"
+
+# flush dns
+alias flushdns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
+
+# update all software
+alias updateall="sudo softwareupdate -l; mas outdated; mas upgrade; brew update; brew upgrade; brew cleanup;"
+
+# IP addresses
+alias localip="ipconfig getifaddr en0"
+
+# Empty the Trash on all mounted volumes and the main HDD.
+# Also, clear Apple’s System Logs to improve shell startup speed.
+# Finally, clear download history from quarantine. https://mths.be/bum
+alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV2 'delete from LSQuarantineEvent'; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV2 'vacuum LSQuarantineEvent'"
+
+# Weekly cleanup
+alias weekly="updateall; flushdns; emptytrash;"
+
+# Print each PATH entry on a separate line
+alias path="echo -e ${PATH//:/\\n}"

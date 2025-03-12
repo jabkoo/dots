@@ -1,0 +1,31 @@
+# Env file
+.env
+
+## Brewfile lock
+Brewfile.lock.json
+
+# Folder view configuration files
+.DS_Store
+Desktop.ini
+
+# Thumbnail cache files
+._*
+Thumbs.db
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
+
+# Zsh
+.antidote/
+.zcompcache/
+.zsh_sessions/
+.zcompdump*
+.zsh_history
+.zsh_plugins.zsh
+*.bak
+*.local
+*.local.zsh
+*.zwc
+*.zwc.old
+~*

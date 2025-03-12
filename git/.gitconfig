@@ -1,0 +1,19 @@
+[alias]
+	whoami = config user.email
+[core]
+	editor = $EDITOR
+[credential]
+	helper = osxkeychain
+[fetch]
+	prune = true
+[diff]
+	algorithm = patience
+	colorMoved = zebra
+	renames = copies
+[pull]
+	rebase = true
+[user]
+	name = jabkoo
+	email = jabrzyk.k@gmail.com
+[init]
+	defaultBranch = main
