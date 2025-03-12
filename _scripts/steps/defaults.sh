@@ -171,6 +171,14 @@ configure_defaults() {
 	defaults write NSGlobalDomain NSUserKeyEquivalents -dict-add "Zoom" -string '@$^~f'
 
 	# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+	# Apple Intelligence                                                          #
+	# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+	# System Settings > Apple Intelligence & Siri > Apple Intelligence: Disabled
+	defaults write com.apple.CloudSubscriptionFeatures.optIn "device" -bool "false"
+ 	defaults write com.apple.CloudSubscriptionFeatures.optIn "auto_opt_in" -bool "false"
+
+	# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 	# Finder                                                                      #
 	# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
