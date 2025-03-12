@@ -2,6 +2,7 @@
 
 set -o posix
 
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 source "$DIR/utils.sh"
 
 AVAILABLE_SCRIPTS=(
