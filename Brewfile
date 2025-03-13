@@ -4,6 +4,7 @@ cask_args no_quarantine: true
 # Tap Homebrew
 tap "homebrew/bundle"
 tap "homebrew/services"
+tap "koekeishiya/formulae"
 
 # Brew
 brew "clipboard"
@@ -37,9 +38,7 @@ brew "zsh"
 brew "koekeishiya/formulae/yabai"
 
 # Cask
-cask "background-music"
 cask "bitwarden"
-cask "blackhole-16ch"
 cask "docker"
 cask "equinox"
 cask "firefox"
