@@ -113,7 +113,7 @@ run_scripts() {
 }
 
 while true; do
-	osascript -e 'tell application "System Events" to keystroke "."'
+	osascript -e 'tell application "System Events" to key code 51'
 	if [ $? -eq 0 ]; then
 		 break
 	fi

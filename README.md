@@ -8,7 +8,7 @@ A space for my Mac's dotfiles. It also includes few scripts to automate most of 
 - `System Settings -> Privacy & Security -> Full Disk Access`
 - `System Settings -> Privacy & Security -> Accessibility`
 - `System Settings -> Privacy & Security -> Automation -> System Events`
-	- Can be done by running, e.g. `osascript -e 'tell application "System Events" to keystroke "."'`, but `install.sh` script already handles that 
+	- Can be done by running, e.g. `osascript -e 'tell application "System Events" to key code 51'`, but `install.sh` script already handles that 
 
 Use `run.sh` script to copy the repository and run full installation:
 
@@ -27,6 +27,6 @@ Available scripts:
 - `homebrew`: Installs Homebrew package manager and packages defined in Brewfile
 - `stow`: Stows packages
 - `ssh`: Generates a new SSH key
-- `firefox`: Configures Firefox browser"
+- `firefox`: Configures Firefox browser
 - `xcode`: Builds XCode
 - `defaults`: Configures various default MacOS settings

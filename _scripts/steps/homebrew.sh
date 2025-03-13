@@ -21,8 +21,9 @@ failed=0
 
 		if ! grep -q -s '/opt/homebrew/bin/brew shellenv' "$HOME/.zprofile"; then
 			echo $'eval "$(/opt/homebrew/bin/brew shellenv)"' >>"$HOME/.zprofile"
-			eval "$(/opt/homebrew/bin/brew shellenv)"
 		fi
+
+		eval "$(/opt/homebrew/bin/brew shellenv)"
 	else
 		info "Homebrew already installed. Updating...\n"
 		brew update
@@ -30,7 +31,7 @@ failed=0
 
 	info "Installing packages from Homebrew..."
 
-	/opt/homebrew/bin/brew bundle --cleanup --file "$DOTFILES/Brewfile"
+	brew bundle --cleanup --file "$DOTFILES/Brewfile"
 ) || failed=1
 
 if [ $failed -eq 0 ]; then

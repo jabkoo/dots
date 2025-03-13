@@ -8,7 +8,6 @@ if type git >/dev/null; then
 	cd $HOME
 	git clone $DOTS_REPO $DOTS_DIR
 	chmod +x $DOTS_DIR
- 	touch "$HOME/.zprofile"
 	cd $DOTS_DIR || exit
 	./_scripts/install.sh "$@"
 else
@@ -18,7 +17,6 @@ else
 	rm -rf main.zip
 	mv "$DOTS-main" $DOTS_DIR
 	chmod +x $DOTS_DIR
- 	touch "$HOME/.zprofile"
 	cd $DOTS_DIR || exit
 	./_scripts/install.sh "$@"
 fi
