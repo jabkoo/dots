@@ -200,7 +200,7 @@ configure_defaults() {
 	defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 
 	# Finder > View > As List
-	defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+	defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 
 	# Finder > View > Show Path Bar
 	defaults write com.apple.finder ShowPathbar -bool true
