@@ -41,7 +41,7 @@ cask "the-unarchiver"
 cask "vivaldi"
 
 # Fonts
-cask "font-jetbrains-mono-nerd-font"
+cask "font-iosevka-nerd-font"
 cask "font-symbols-only-nerd-font"
 cask "font-sn-pro"
 
