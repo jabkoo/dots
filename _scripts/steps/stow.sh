@@ -8,7 +8,7 @@ failed=0
 (
 	title "Stowing packages"
 
-	stow -d $DOTFILES -t $HOME git ssh zsh
+	stow -d $DOTFILES -t $HOME git ssh zsh ghostty
 ) || failed=1
 
 if [ $failed -eq 0 ]; then

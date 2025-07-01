@@ -25,8 +25,9 @@ brew "zsh"
 
 # Cask
 cask "bitwarden"
-cask "docker"
+cask "docker-desktop"
 cask "firefox"
+cask "ghostty"
 cask "hammerspoon"
 cask "karabiner-elements"
 cask "logi-options+"

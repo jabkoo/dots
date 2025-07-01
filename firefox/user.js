@@ -309,10 +309,17 @@ user_pref("privacy.sanitize.sanitizeOnShutdown", true);
 user_pref("privacy.clearOnShutdown_v2.cache", true);
 user_pref("privacy.clearOnShutdown_v2.cookiesAndStorage", false);
 user_pref("privacy.clearOnShutdown_v2.historyFormDataAndDownloads", false);
+user_pref("privacy.clearOnShutdown_v2.browsingHistoryAndDownloads", false);
 
 // PREF: after crashes or restarts, do not save extra session data
 // such as form content, scrollbar positions, and POST data
 user_pref("browser.sessionstore.privacy_level", 2);
+
+// PREF: Sidebar
+user_pref("sidebar.verticalTabs", true);
+user_pref("sidebar.revamp", true);
+user_pref("sidebar.new-sidebar.has-used", true);
+user_pref("sidebar.main.tools", "history,bookmarks");
 
 user_pref("xpinstall.signatures.required", false);
 
