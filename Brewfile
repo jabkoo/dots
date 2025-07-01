@@ -1,10 +1,6 @@
 cask_args appdir: "/Applications"
 cask_args no_quarantine: true
 
-# Tap Homebrew
-tap "homebrew/bundle"
-tap "homebrew/services"
-
 # Brew
 brew "curl"
 brew "eza"
