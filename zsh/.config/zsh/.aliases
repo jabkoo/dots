@@ -1,7 +1,8 @@
 #!/bin/sh
 
 # shortcuts
-alias ealias="nvim $DOTFILES/zsh/.config/zsh/.aliases"
+alias ealias="nvim $ZDOTDIR/.aliases"
+alias lalias="cat $ZDOTDIR/.aliases | grep alias | cut -c 7- | less"
 
 alias _="sudo"
 alias root="sudo -i"
@@ -23,7 +24,7 @@ alias ..='cd ..'
 alias ...='cd ../../'
 alias ....='cd ../../../'
 
-# eza aliases
+# eza
 alias ls="eza -a"
 alias l="ls -F --icons --group-directories-first"
 alias lv="ls -1F --icons --group-directories-first"
