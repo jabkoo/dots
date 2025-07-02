@@ -1,6 +1,8 @@
 #!/bin/sh
 
 # shortcuts
+alias ealias="nvim $DOTFILES/zsh/.config/zsh/.aliases"
+
 alias _="sudo"
 alias root="sudo -i"
 alias c="clear"
@@ -40,6 +42,10 @@ alias nvconf="cd ${XDG_CONFIG_HOME:-$HOME/.config}/nvim"
 alias zshrc="${EDITOR:-vim} "${ZDOTDIR:-$HOME}"/.zshrc"
 alias zdot="cd ${ZDOTDIR:-~}"
 alias reload="source ${ZDOTDIR:-~}/.zshrc"
+
+# homebrwe
+alias ebrew="nvim $DOTFILES/Brewfile"
+alias bbrew="brew bundle --file $DOTFILES/Brewfile --upgrade --cleanup --zap"
 
 # power
 alias reboot="sudo reboot"
