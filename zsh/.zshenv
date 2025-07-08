@@ -23,5 +23,6 @@ path=(
   $HOME/.local/{,s}bin(N)
   /opt/{homebrew,local}/{,s}bin(N)
   /usr/local/{,s}bin(N)
+  $HOME/.rd/bin(N)
   $path
 )

@@ -20,6 +20,8 @@ alias v="nvim"
 alias xp="chmod +x"
 alias quit="exit"
 
+alias k="kubectl"
+
 alias ..='cd ..'
 alias ...='cd ../../'
 alias ....='cd ../../../'
@@ -38,6 +40,8 @@ alias dots="cd $DOTFILES"
 alias docs="cd $HOME/Documents"
 alias dl="cd $HOME/Downloads"
 alias nvconf="cd ${XDG_CONFIG_HOME:-$HOME/.config}/nvim"
+alias ic="cd $HOME/Cloud"
+alias sb="cd $HOME/SecondBrain"
 
 # zsh
 alias zshrc="${EDITOR:-vim} "${ZDOTDIR:-$HOME}"/.zshrc"
