@@ -63,7 +63,11 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -aF --icons --group-directories
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza -aF --icons --group-directories-first $realpath'
 
 # Shell integrations
-eval "$(kubectl completion zsh)"
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
+
+eval "$(kubectl completion zsh)"
+
+eval "$(mise activate zsh)"
+eval "$(mise install -q)"
