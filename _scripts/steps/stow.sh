@@ -8,7 +8,7 @@ failed=0
 (
 	title "Stowing packages"
 
-	stow -d $DOTFILES -t $HOME git ssh zsh ghostty nvim mise
+	stow -d $DOTFILES -t $HOME git ssh zsh ghostty nvim mise kanata
 ) || failed=1
 
 if [ $failed -eq 0 ]; then

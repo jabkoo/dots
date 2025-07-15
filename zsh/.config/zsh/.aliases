@@ -56,8 +56,7 @@ alias bbrew="brew bundle --file $DOTFILES/Brewfile --upgrade --cleanup --zap"
 alias rstow="$DOTFILES/_scripts/steps/stow.sh"
 
 addstow() {
-	if [ -n "$1" ]
-	then
+	if [ -n "$1" ]; then
 		mkdir -p $DOTFILES/$1
 		sed -i "" "/stow -d/ s/$/ $1/" "$DOTFILES/_scripts/steps/stow.sh"
 	else
@@ -66,8 +65,7 @@ addstow() {
 }
 
 delstow() {
-	if [ -n "$1" ]
-	then
+	if [ -n "$1" ]; then
 		rm -rI $DOTFILES/$1
 		sed -i "" "/stow -d/ s/ $1//g" "$DOTFILES/_scripts/steps/stow.sh"
 	else
@@ -97,4 +95,4 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo 
 alias weekly="updateall; flushdns; emptytrash;"
 
 # Print each PATH entry on a separate line
-alias path="echo -e ${PATH//:/\\n}"
+alias path="echo $PATH | tr ':' '\n'"
