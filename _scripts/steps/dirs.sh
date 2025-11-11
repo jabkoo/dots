@@ -20,7 +20,7 @@ failed=0
     done
 
 	ln -s "$HOME/Library/Mobile Documents/com~apple~CloudDocs" "$HOME/Cloud"
-	ln -s "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/SecondBrain" "$HOME/SecondBrain"
+	ln -s "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Documents/03_SecondBrain" "$HOME/SecondBrain"
 ) || failed=1
 
 if [ $failed -eq 0 ]; then

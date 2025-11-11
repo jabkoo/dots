@@ -12,6 +12,8 @@
 	renames = copies
 [pull]
 	rebase = true
+[push]
+	autoSetupRemote = true
 [user]
 	name = jabkoo
 	email = jabrzyk.k@gmail.com

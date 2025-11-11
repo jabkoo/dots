@@ -1,5 +1,6 @@
 [tools]
 node = 'lts'
+java = 'latest'
 go = 'latest'
 lua = 'latest'
 python = '3'
