@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-source "$DIR/../utils.sh"
+. "$DIR/../utils.sh"
 
 configure_defaults() {
+	title "Configuring MacOS defaults"
+
 	# Close any System Settings windows first
 	osascript -e 'tell application "System Settings" to quit'
 
@@ -410,15 +412,8 @@ configure_defaults() {
 	done
 }
 
-failed=0
-(
-	title "Configuring MacOS defaults"
-
-	configure_defaults
-) || failed=1
-
-if [ $failed -eq 0 ]; then
+if configure_defaults; then
 	ok "MacOS configured successfully!"
 else
-	err_exit "One or more errors occured during MacOS defaults configuration. Try running defaults.sh again."
+	err_exit "MacOS configuration failed."
 fi

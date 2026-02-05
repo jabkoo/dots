@@ -26,11 +26,11 @@ err_exit() {
 }
 
 warn() {
-	printf "%b⚠️  Warning: %s%b\n" "${COLOR_YELLOW}" "$1" "${COLOR_NONE}"
+	printf "%b⚠️ Warning: %s%b\n" "${COLOR_YELLOW}" "$1" "${COLOR_NONE}"
 }
 
 info() {
-	printf "ℹ️  Info: %s\n" "$1"
+	printf "ℹ️ Info: %s\n" "$1"
 }
 
 ok() {

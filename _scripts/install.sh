@@ -108,7 +108,9 @@ install() {
 
 run_scripts() {
 	for script in "${scripts_to_run[@]}"; do
-    	. "$DOTFILES/_scripts/steps/$script.sh"
+		if ! "$DOTFILES/_scripts/steps/$script.sh"; then
+            err_exit "Step '$script' failed"
+        fi
 	done
 }
 

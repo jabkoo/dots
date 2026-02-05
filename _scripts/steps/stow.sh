@@ -1,18 +1,17 @@
 #!/usr/bin/env bash
 
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-source "$DIR/../utils.sh"
-source "$HOME/.zprofile"
+. "$DIR/../utils.sh"
+. "$HOME/.zprofile"
 
-failed=0
-(
+stow_packages() {
 	title "Stowing packages"
 
 	stow -d $DOTFILES -t $HOME git ssh zsh ghostty nvim mise
-) || failed=1
+}
 
-if [ $failed -eq 0 ]; then
+if stow_packages; then
 	ok "All packages stowed successfully!"
 else
-	err_exit "One or more errors occured during stow. Try running stow.sh again."
+	err_exit "Stowing packages failed."
 fi

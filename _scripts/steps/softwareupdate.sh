@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-source "$DIR/../utils.sh"
+. "$DIR/../utils.sh"
 
-failed=0
-(
+update_mac() {
 	title "Updating MacOS software"
 
 	softwareupdate --install --all --force --agree-to-license
@@ -25,10 +24,10 @@ failed=0
 		done
 	fi
 	sudo xcode-select -s /Library/Developer/CommandLineTools
-) || failed=1
+}
 
-if [ $failed -eq 0 ]; then
+if update_mac; then
 	ok "Finished software update successfully"
 else
-	err_exit "One or more errors occured during software update. Try running softwareupdate.sh again."
+	err_exit "Updating MacOS failed."
 fi

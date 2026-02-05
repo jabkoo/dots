@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-source "$DIR/../utils.sh"
-source "$HOME/.zprofile"
+. "$DIR/../utils.sh"
+. "$HOME/.zprofile"
 
 FF_PROFILE_NAME="jabko"
 
@@ -11,7 +11,7 @@ ff_profile_folder=""
 addonlist="ublock-origin violentmonkey bitwarden-password-manager"
 
 prepare_firefox() {
-	info "Setting up Firefox"
+	title "Setting up Firefox"
 
     firefox -CreateProfile $FF_PROFILE_NAME
     firefox -no-remote &
@@ -51,15 +51,8 @@ install_firefox_addons() {
 	done
 }
 
-failed=0
-(
-	title "Setting up Firefox"
-
-	prepare_firefox
-) || failed=1
-
-if [ $failed -eq 0 ]; then
+if prepare_firefox; then
 	ok "Firefox set up successfully!"
 else
-	err_exit "One or more errors occured during Firefox setup. Try running firefox.sh again."
+	err_exit "Firefox setup failed."
 fi

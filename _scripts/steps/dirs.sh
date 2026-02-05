@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-source "$DIR/../utils.sh"
+. "$DIR/../utils.sh"
 
-failed=0
-(
+create_directories() {
 	title "Creating custom directories"
 
 	dirs=(
@@ -21,10 +20,10 @@ failed=0
 
 	ln -sf "$HOME/Library/Mobile Documents/com~apple~CloudDocs" "$HOME/Cloud"
 	ln -sf "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents" "$HOME/Obsidian"
-) || failed=1
+}
 
-if [ $failed -eq 0 ]; then
+if create_directories; then
 	ok "Custom directories created successfully!"
-else'/Users/jabko/Library/Mobile Documents/iCloud~md~obsidian/Documents'
-	err_exit "One or more errors occured during creating custom directories. Try running dirs.sh again."
+else
+	err_exit "Directories creation failed."
 fi

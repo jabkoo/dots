@@ -3,8 +3,7 @@
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 source "$DIR/../utils.sh"
 
-failed=0
-(
+build_xcode() {
 	title "Building XCode"
 
 	if ! xcode-select --print-path &>/dev/null; then
@@ -17,10 +16,10 @@ failed=0
 
 	sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
 	sudo xcodebuild -license accept
-) || failed=1
+}
 
-if [ $failed -eq 0 ]; then
+if build_xcode; then
 	ok "XCode built successfully!"
 else
-	err_exit "One or more errors occured during XCode build. Try running xcode.sh again."
+	err_exit "Building XCode failed."
 fi

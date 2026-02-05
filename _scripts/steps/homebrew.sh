@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-source "$DIR/../utils.sh"
+. "$DIR/../utils.sh"
 
-failed=0
-(
+install_homebrew() {
 	title "Installing Homebrew packages"
 
 	if ! command -v brew &> /dev/null; then
@@ -32,10 +31,10 @@ failed=0
 	info "Installing packages from Homebrew..."
 
 	brew bundle --cleanup --file "$DOTFILES/Brewfile"
-) || failed=1
+}
 
-if [ $failed -eq 0 ]; then
+if install_homebrew; then
 	ok "Homebrew packages were installed successfully!"
 else
-	err_exit "One or more errors occured during Homebrew installation. Try running homebrew.sh again."
+	err_exit "Installing homebrew packages failed."
 fi
