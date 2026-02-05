@@ -1,3 +1,6 @@
-font-family = Iosevka Nerd Font Mono
+font-family = ProggyClean Nerd Font
+font-size = 17
 
-theme = light:Monokai Pro Light,dark:Monokai Pro
+theme = Flatland
+
+background-opacity = 0.9

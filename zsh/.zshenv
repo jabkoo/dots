@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Exports
 export DOTFILES=${DOTFILES:-$HOME/dots}
@@ -13,6 +13,8 @@ export VISUAL='nvim'
 
 export LC_ALL="en_GB.UTF-8"
 export LANG="en_GB"
+
+export HOMEBREW_NO_INSTALL_FROM_API=1
 
 # Ensure path arrays do not contain duplicates.
 typeset -gU path fpath

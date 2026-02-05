@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 export DOTFILES=${DOTFILES:-$HOME/dots}
 
