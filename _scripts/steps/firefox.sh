@@ -8,7 +8,7 @@ FF_PROFILE_NAME="jabko"
 
 ff_profile_folder=""
 
-addonlist="ublock-origin istilldontcareaboutcookies violentmonkey addy_io bitwarden-password-manager surfingkeys_ff"
+addonlist="ublock-origin violentmonkey bitwarden-password-manager"
 
 prepare_firefox() {
 	info "Setting up Firefox"

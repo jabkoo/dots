@@ -41,7 +41,7 @@ alias docs="cd $HOME/Documents"
 alias dl="cd $HOME/Downloads"
 alias nvconf="cd ${XDG_CONFIG_HOME:-$HOME/.config}/nvim"
 alias ic="cd $HOME/Cloud"
-alias sb="cd $HOME/SecondBrain"
+alias obs="cd $HOME/Obsidian"
 
 # zsh
 alias zshrc="${EDITOR:-vim} "${ZDOTDIR:-$HOME}"/.zshrc"

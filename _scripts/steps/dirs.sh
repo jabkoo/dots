@@ -8,8 +8,8 @@ failed=0
 	title "Creating custom directories"
 
 	dirs=(
-		"$HOME/Projects/selfhosted"
-		"$HOME/Projects/jabkoo"
+		"$HOME/Repos/selfhosted"
+		"$HOME/Repos/jabkoo"
 		"$HOME/.config"
 		"$HOME/.ssh"
 	)
@@ -19,12 +19,12 @@ failed=0
         mkdir -p "$dir"
     done
 
-	ln -s "$HOME/Library/Mobile Documents/com~apple~CloudDocs" "$HOME/Cloud"
-	ln -s "$HOME/Library/Mobile Documents/com~apple~CloudDocs/Documents/03_SecondBrain" "$HOME/SecondBrain"
+	ln -sf "$HOME/Library/Mobile Documents/com~apple~CloudDocs" "$HOME/Cloud"
+	ln -sf "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents" "$HOME/Obsidian"
 ) || failed=1
 
 if [ $failed -eq 0 ]; then
 	ok "Custom directories created successfully!"
-else
+else'/Users/jabko/Library/Mobile Documents/iCloud~md~obsidian/Documents'
 	err_exit "One or more errors occured during creating custom directories. Try running dirs.sh again."
 fi
