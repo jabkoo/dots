@@ -9,7 +9,7 @@ if command -v git; then
 	git clone "$DOTS_REPO" "$DOTS_DIR"
 	chmod +x "$DOTS_DIR"
 	cd "$DOTS_DIR" || exit
-	./_scripts/install "$@"
+	./_scripts/install.sh "$@"
 else
 	cd "$HOME"
 	curl -LO "$DOTS_REPO/archive/main.zip"
@@ -18,5 +18,5 @@ else
 	mv "$DOTS-main" "$DOTS_DIR"
 	chmod +x "$DOTS_DIR"
 	cd "$DOTS_DIR" || exit
-	./_scripts/install "$@"
+	./_scripts/install.sh "$@"
 fi
