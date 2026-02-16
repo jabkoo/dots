@@ -1,1 +1,1 @@
-ublock-origin istilldontcareaboutcookies violentmonkey addy_io bitwarden-password-manager surfingkeys_ff
+ublock-origin violentmonkey addy_io bitwarden-password-manager web-clipper-obsidian

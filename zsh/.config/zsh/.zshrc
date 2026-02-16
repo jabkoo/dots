@@ -67,7 +67,5 @@ eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
 
-eval "$(kubectl completion zsh)"
-
 eval "$(mise activate zsh)"
 eval "$(mise install -q)"

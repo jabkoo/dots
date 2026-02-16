@@ -2,7 +2,7 @@
 
 # shortcuts
 alias ealias="nvim $ZDOTDIR/.aliases"
-alias lalias="cat $ZDOTDIR/.aliases | grep alias | cut -c 7- | less"
+alias lalias="bat $ZDOTDIR/.aliases | grep alias | cut -c 7- | less"
 
 alias _="sudo"
 alias root="sudo -i"
@@ -21,6 +21,8 @@ alias xp="chmod +x"
 alias quit="exit"
 
 alias k="kubectl"
+alias cat="bat"
+alias grep="rg"
 
 alias ..='cd ..'
 alias ...='cd ../../'
@@ -50,7 +52,7 @@ alias reload="source ${ZDOTDIR:-~}/.zshrc"
 
 # homebrew
 alias ebrew="nvim $DOTFILES/Brewfile"
-alias bbrew="brew bundle --file $DOTFILES/Brewfile --upgrade --cleanup --zap"
+alias bbrew="brew bundle --file $DOTFILES/Brewfile --upgrade --zap"
 
 # stow
 alias rstow="$DOTFILES/_scripts/steps/stow.sh"

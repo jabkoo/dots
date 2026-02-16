@@ -60,12 +60,12 @@ user_pref("dom.enable_web_task_scheduling", true);
 /** TRACKING PROTECTION ***/
 user_pref("browser.contentblocking.category", "strict");
 user_pref(
-  "urlclassifier.trackingSkipURLs",
-  "*.reddit.com, *.twitter.com, *.twimg.com, *.tiktok.com",
+	"urlclassifier.trackingSkipURLs",
+	"*.reddit.com, *.twitter.com, *.twimg.com, *.tiktok.com",
 );
 user_pref(
-  "urlclassifier.features.socialtracking.skipURLs",
-  "*.instagram.com, *.twitter.com, *.twimg.com",
+	"urlclassifier.features.socialtracking.skipURLs",
+	"*.instagram.com, *.twitter.com, *.twimg.com",
 );
 user_pref("network.cookie.sameSite.noneRequiresSecure", true);
 user_pref("browser.download.start_downloads_in_tmp_dir", true);
@@ -179,12 +179,12 @@ user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
 user_pref("browser.discovery.enabled", false);
 user_pref("browser.shell.checkDefaultBrowser", false);
 user_pref(
-  "browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons",
-  false,
+	"browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons",
+	false,
 );
 user_pref(
-  "browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features",
-  false,
+	"browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features",
+	false,
 );
 user_pref("browser.preferences.moreFromMozilla", false);
 user_pref("browser.aboutConfig.showWarning", false);
@@ -201,8 +201,8 @@ user_pref("browser.display.focus_ring_width", 0);
 user_pref("layout.css.prefers-color-scheme.content-override", 2);
 user_pref("browser.privateWindowSeparation.enabled", false); // WINDOWS
 user_pref(
-  "browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled",
-  true,
+	"browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled",
+	true,
 );
 
 /** COOKIE BANNER HANDLING ***/
@@ -316,8 +316,6 @@ user_pref("privacy.clearOnShutdown_v2.browsingHistoryAndDownloads", false);
 user_pref("browser.sessionstore.privacy_level", 2);
 
 // PREF: Sidebar
-user_pref("sidebar.verticalTabs", true);
-user_pref("sidebar.revamp", true);
 user_pref("sidebar.new-sidebar.has-used", true);
 user_pref("sidebar.main.tools", "history,bookmarks");
 
