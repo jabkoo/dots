@@ -75,6 +75,9 @@ delstow() {
 	fi
 }
 
+# quarantine
+alias unq="sudo xattr -d com.apple.quarantine"
+
 # power
 alias reboot="sudo reboot"
 alias off="sudo shutdown -r now"

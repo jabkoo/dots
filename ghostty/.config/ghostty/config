@@ -1,6 +1,7 @@
 font-family = ProggyClean Nerd Font
 font-size = 12
 
-theme = Flatland
+theme = dark:cyberdream,light:cyberdream-light
 
-background-opacity = 0.9
+background-opacity = 0.8
+background-blur = true

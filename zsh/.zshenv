@@ -26,5 +26,6 @@ path=(
   /opt/{homebrew,local}/{,s}bin(N)
   /usr/local/{,s}bin(N)
   $HOME/.rd/bin(N)
+  /Applications/Obsidian.app/Contents/MacOS
   $path
 )
