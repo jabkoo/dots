@@ -1,5 +1,7 @@
 cask_args appdir: "/Applications"
 
+tap "homebrew/cask"
+
 # Brew
 brew "bat"
 brew "curl"
@@ -33,23 +35,22 @@ cask "bitwarden"
 cask "blender"
 cask "figma"
 cask "firefox"
-cask "ghostty"
 cask "inkscape"
 cask "kicad"
+cask "kitty"
 cask "logi-options+"
 cask "microsoft-teams"
 cask "obsidian"
 cask "orion"
-cask "qutebrowser"
 cask "rancher"
 cask "the-unarchiver"
 cask "utm"
-cask "vivaldi"
-cask "zed"
+cask "visual-studio-code"
 
 # Fonts
-cask "font-iosevka-nerd-font"
+cask "font-jetbrains-mono-nerd-font"
 cask "font-symbols-only-nerd-font"
+cask "font-proggy-clean-tt-nerd-font"
 cask "font-sn-pro"
 
 # App Store

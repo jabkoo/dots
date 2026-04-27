@@ -7,7 +7,7 @@ DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 stow_packages() {
 	title "Stowing packages"
 
-	stow -d $DOTFILES -t $HOME git ssh zsh ghostty mise
+	stow -d $DOTFILES -t $HOME git ssh zsh mise kitty
 }
 
 if stow_packages; then

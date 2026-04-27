@@ -16,6 +16,8 @@ export LANG="en_GB"
 
 export HOMEBREW_NO_INSTALL_FROM_API=1
 
+export NVIM_APPNAME=nvim-config-playground
+
 # Ensure path arrays do not contain duplicates.
 typeset -gU path fpath
 
